@@ -1,6 +1,4 @@
 #!/usr/bin/env python3
-#!/usr/bin/env python3
-""" sum mixed list  """
 from typing import List, Union
 """ sum mixed list  """
 
