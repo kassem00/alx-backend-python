@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 """ add two nums """
 
-a: int = 1
-pi: float = 3.14
-i_understand_annotations: bool = True
-school: str = “Holberton”
+
+def to_str(n: float) -> str:
+    """
+    type-annotated function add that takes a float a and a float
+    b as arguments and returns
+    """
+    return str(n)
