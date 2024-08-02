@@ -7,4 +7,7 @@ from typing import Dict
 
 def floor(n: float) -> int:
     """ floor div """
-    return math.floor(n)
+    if n >= 0:
+        return int(n)
+    else:
+        return int(n) - 1 if n != int(n) else int(n)
