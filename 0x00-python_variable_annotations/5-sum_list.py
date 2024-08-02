@@ -3,7 +3,7 @@
 from typing import List
 
 
-def sum_list(input_list: List[float]) -> float:
+def sum_list(input_list: List[float, int]) -> float:
     """ sum_list """
     x: float = 0
     for value in input_list:
