@@ -13,7 +13,9 @@ class TestGithubOrgClient(unittest.TestCase):
     def test_access_nested_map(self, nested_map, path, expected):
         """ test_access_nested_map """
         self.assertEqual(access_nested_map(nested_map, path), expected)
-
+    def test_public_repos(self):
+        """ test_access_nested_map """
+        
 
 if __name__ == "__main__":
     unittest.main()
