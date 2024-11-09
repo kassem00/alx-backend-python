@@ -20,14 +20,15 @@ class TestAccessNestedMap(unittest.TestCase):
         ({"a": {"b": 2}}, ("a", "b"), 2),
     ])
     def test_access_nested_map(self, nested_map, path, expected):
-        """Test that access_nested_map returns the expected output for given inputs."""
+        """
+        Test that access_nested_map returns the expected output for given in
+        """
         self.assertEqual(access_nested_map(nested_map, path), expected)
 
     @parameterized.expand([
         ({}, ("a",), 'a'),
         ({"a": 1}, ("a", "b"), 'b')
     ])
-
     def test_access_nested_map_exception(self, nested_map, path, expected):
         """ Test that a KeyError is raised for the respective inputs """
         with self.assertRaises(KeyError) as e:
@@ -56,7 +57,7 @@ class TestMemoize(unittest.TestCase):
     """ Class for Testing Memoize """
 
     def test_memoize(self):
-        """ 
+        """
         Test that when calling a_property twice, the correct result
         is returned but a_method is only called once using
         assert_called_once
