@@ -56,7 +56,8 @@ class TestMemoize(unittest.TestCase):
     """ Class for Testing Memoize """
 
     def test_memoize(self):
-        """ Test that when calling a_property twice, the correct result
+        """ 
+        Test that when calling a_property twice, the correct result
         is returned but a_method is only called once using
         assert_called_once
         """
@@ -77,5 +78,7 @@ class TestMemoize(unittest.TestCase):
             test_class.a_property()
             mock.assert_called_once()
 
+
 if __name__ == "__main__":
+    """RUN MAUN"""
     unittest.main()
