@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
 """
-unit test for utils.access_nested_map.
+Unit test for utils.access_nested_map.
 """
 
 
-from unittest import unittest.TestCase
+import unittest
 from utils import access_nested_map
+from parameterized import parameterized
 
 
-class TestAccessNestedMap(unittest.TestCase, nested_map, path, expected):
-    """ unit test for utils.access_nested_map. """
+class TestAccessNestedMap(unittest.TestCase):
+    """Unit tests for the access_nested_map function."""
 
     @parameterized.expand([
         ({"a": 1}, ("a",), 1),
@@ -17,10 +18,9 @@ class TestAccessNestedMap(unittest.TestCase, nested_map, path, expected):
         ({"a": {"b": 2}}, ("a", "b"), 2),
     ])
     def test_access_nested_map(self, nested_map, path, expected):
-        """ Test that the method returns what it is supposed to """
+        """Test that access_nested_map returns the expected output for given inputs."""
         self.assertEqual(access_nested_map(nested_map, path), expected)
 
 
 if __name__ == "__main__":
-    """ main test file"""
     unittest.main()
