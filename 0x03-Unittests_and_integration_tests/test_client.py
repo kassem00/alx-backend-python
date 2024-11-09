@@ -1,27 +1,27 @@
 #!/usr/bin/env python3
 """
-unit test for utils.access_nested_map.
+Unit test for utils.access_nested_map.
 """
-from unittest import unittest.TestCase
+
+
+import unittest
 from utils import access_nested_map
+from parameterized import parameterized
 
 
-class TestGithubOrgClient(unittest.TestCase):
-    """ unit test for utils.access_nested_map. """
+class TestAccessNestedMap(unittest.TestCase):
+    """Unit tests for the access_nested_map function."""
 
     @parameterized.expand([
         ({"a": 1}, ("a",), 1),
         ({"a": {"b": 2}}, ("a",), {"b": 2}),
         ({"a": {"b": 2}}, ("a", "b"), 2),
-        ({"a": {"b": {"c": 3}}}, ("a", "b", "c"), 3),
-        ({"a": {"b": {"c": 3}}}, ("a", "b", "d"), None),
     ])
+
     def test_access_nested_map(self, nested_map, path, expected):
-        """ test_access_nested_map """
-        s
-    def test_public_repos(self):
-        """ test_access_nested_map """
-        pass
+        """Test that access_nested_map returns the expected output for given inputs."""
+        self.assertEqual(access_nested_map(nested_map, path), expected)
+
 
 if __name__ == "__main__":
     unittest.main()
